@@ -65,3 +65,7 @@ Route::get('/product/{id}',
     function ($id) {
         return 'Product #'.$id;
     });
+
+Route::get('/tes', function() {
+    return 'Tes commit';
+}); 
