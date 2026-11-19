@@ -10,13 +10,13 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up(): void
-    { Schema::create('jurusans', function (Blueprint $table) {
-        $table->id();
-        $table->string('kode', 5)->unique();
-        $table->string('nama', 100);
-        $table->timestamps();
-    });
-        //
+    {
+        Schema::create('jurusans', function (Blueprint $table) {
+            $table->id();
+            $table->string('kode', 5)->unique();
+            $table->string('nama', 100);
+            $table->timestamps();
+        });
     }
 
     /**
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('jurusans');
     }
 };
